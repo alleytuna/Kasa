@@ -1,0 +1,52 @@
+main {
+  padding-bottom: 200px;
+}
+.Banner {
+  position: relative;
+  color: #fff;
+  margin: 32px 0px;
+  text-align: center;
+}
+
+.BannerText {
+  position: absolute;
+  top: 50%;
+  margin: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+}
+
+.BannerHome {
+  border-radius: 25px;
+  width: 100%;
+}
+
+.ArticlesContainer {
+  background: #F7F7F7;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.PictureContainer {
+  margin: 32px;
+}
+
+.ArticlePicture {
+  border-radius: 10px;
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+}
+
+.ArticleText {
+  position: absolute;
+  width: 340px;
+  margin-top: -48px;
+  margin-left: 10px;
+  color: #F7F7F7;
+  font-size: 18px;
+}

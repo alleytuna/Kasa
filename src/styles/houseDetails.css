@@ -1,0 +1,33 @@
+.BannerDetails {
+  height: 415px;
+  border-radius: 25px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Title {
+  font-size: 36px;
+}
+
+.Location {
+  font-size: 18px;
+}
+
+.Tag {
+  background-color:#FF6060;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 3px 21px;
+  margin: 8px;
+}
+
+.ProfilePicture {
+  width: 64px;
+  height: 64px;
+  border-radius: 30px;
+}
+
+.HostName {
+  font-size: 18px;
+}

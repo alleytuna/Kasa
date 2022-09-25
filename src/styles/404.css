@@ -1,0 +1,19 @@
+.PageNotFound {
+  text-align: center;
+  margin: 56px 0px;
+  height: 100vh;
+}
+
+.PageNotFound h1 {
+  font-size: 288px;
+  margin: 0px;
+}
+
+.PageNotFound h2 {
+  font-size: 36px;
+}
+
+.PageNotFound h3 {
+  font-size: 18px;
+  margin-top: 88px;
+}
