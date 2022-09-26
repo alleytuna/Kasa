@@ -1,6 +1,9 @@
 main {
   padding-bottom: 200px;
+  margin: 48px;
+  margin-bottom: 0px;
 }
+
 .Banner {
   position: relative;
   color: #fff;
@@ -21,14 +24,15 @@ main {
 .BannerHome {
   border-radius: 25px;
   width: 100%;
+  filter: brightness(70%);
 }
 
 .ArticlesContainer {
-  background: #F7F7F7;
+  background: #f7f7f7;
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .PictureContainer {
@@ -40,6 +44,7 @@ main {
   width: 340px;
   height: 340px;
   object-fit: cover;
+  filter: brightness(90%);
 }
 
 .ArticleText {
@@ -47,6 +52,49 @@ main {
   width: 340px;
   margin-top: -48px;
   margin-left: 10px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 8px;
+    margin-bottom: 0px;
+  }
+
+  .PictureContainer {
+    margin: 24px;
+  }
+
+  .BannerText {
+    font-size: 36px;
+  }
+
+  .ArticlePicture {
+    width: 240px;
+    height: 240px;
+  }
+
+  .ArticleText {
+    font-size: 14px;
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .ArticlePicture {
+    width: 100%;
+    height: 240px;
+  }
+
+  .BannerHome {
+    border-radius: 10px;
+    height: 111px;
+  }
+
+  .BannerText {
+    font-size: 20px;
+    text-align: left;
+    width: 90%;
+  }
 }

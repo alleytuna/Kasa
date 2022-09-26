@@ -3,9 +3,9 @@ import "../styles/houseDetails.css";
 
 export default function Host({ hostName, hostProfilePicture }) {
   return (
-    <div>
-      <img className="ProfilePicture" src={hostProfilePicture} alt={`${hostName}`} />
+    <div className="HostNameAndPicture">
       <h3 className="HostName">{hostName}</h3>
+      <img className="ProfilePicture" src={hostProfilePicture} alt={`${hostName}`} />
     </div>
   );
 }

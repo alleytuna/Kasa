@@ -1,7 +1,9 @@
 .PageNotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
-  margin: 56px 0px;
-  height: 100vh;
+  height: 70vh;
 }
 
 .PageNotFound h1 {
@@ -15,5 +17,18 @@
 
 .PageNotFound h3 {
   font-size: 18px;
-  margin-top: 88px;
+}
+
+@media screen and (max-width: 425px) {
+  .PageNotFound h1 {
+    font-size: 96px;
+  }
+
+  .PageNotFound h2 {
+    font-size: 18px;
+  }
+  
+  .PageNotFound h3 {
+    font-size: 14px;
+  }
 }

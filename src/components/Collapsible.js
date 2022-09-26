@@ -12,7 +12,7 @@ export const Collapsible = ({ title, content, className }) => {
   };
 
   return (
-    <div>
+    <div className={`${className}CollapseBar`}>
       <button onClick={toggle} className={`${className}CollapseButton`}>
         <h3 className="CollapseButtonTitle">{title}</h3>
         {open === false ? (
@@ -21,7 +21,19 @@ export const Collapsible = ({ title, content, className }) => {
           <img src={ArrowUp} alt="flèche vers le haut" />
         )}
       </button>
-      {open && <h4 className={`${className}CollapseText`}>{content}</h4>}
+      {open && (
+        <div className={`${className}CollapseText`}>
+          {typeof content === "string" ? (
+            content
+          ) : (
+            <ul className="ListOfItems">
+              {content.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </ul>
+          )}{" "}
+        </div>
+      )}
     </div>
   );
 };

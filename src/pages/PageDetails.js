@@ -16,16 +16,12 @@ export default function PageDetails() {
   });
 
   if (house[0] === undefined) {
-    return <PageNotFound />
+    return <PageNotFound />;
   }
-  // si house null, return PageNotFound
 
-  // - mettre footer en bas
-  // - responsive a gerer
+  // carousel : par défaut, commencer pos0, suivant 
   // - commenter le code
-  // - rediger page 404 si id existe
-  // - relire les consignes
-  // - space around not space between pour le home
+  // photos bande déroulante ohlala
 
   const {
     cover,
@@ -46,11 +42,17 @@ export default function PageDetails() {
         description=""
         className="BannerDetails"
       />
-      <h1 className="Title">{title}</h1>
-      <h2 className="Location">{location}</h2>
-      <Tags tags={tags} />
-      <Host hostName={host.name} hostProfilePicture={host.picture}/>
-      <Rating rating={rating}/>
+      <div className="AllInfo">
+        <div className="HouseInfo">
+          <h1 className="Title">{title}</h1>
+          <h2 className="Location">{location}</h2>
+          <Tags tags={tags} />
+        </div>
+        <div className="HostInfo">
+          <Host hostName={host.name} hostProfilePicture={host.picture} />
+          <Rating rating={rating} />
+        </div>
+      </div>
       <div className="AllShortCollapse">
         <Collapsible
           className="Short"

@@ -3,7 +3,7 @@ import "../styles/houseDetails.css";
 
 export default function Tags({ tags }) {
   return (
-    <div >
+    <div className="AllTags">
       {tags.map((tag) => {
         return <span className="Tag">{tag}</span>;
       })}
