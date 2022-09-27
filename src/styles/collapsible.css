@@ -27,7 +27,7 @@
   background-color: #f6f6f6;
   margin-top: 10px;
   padding: 16px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   border-radius: 0px 0px 5px 5px;
 }
@@ -74,6 +74,10 @@
 @media screen and (max-width: 425px) {
   .AllShortCollapse {
     display: block;
+  }
+
+  .LargeCollapseText {
+    font-size: 12px;
   }
 
   .CollapseButtonTitle {

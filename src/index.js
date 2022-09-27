@@ -10,19 +10,19 @@ import PageNotFound from "./pages/404";
 import About from "./pages/About";
 
 import "./index.css";
-import PageDetails from "./pages/PageDetails";
-
+import HouseDetails from "./pages/HouseDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Header />
+      <Header />
+      {/* setting up all the routes/pages existing in this app and the name to access it */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="about" element={<About />} />
-        <Route path="/house/:id" element={<PageDetails />} />
+        <Route path="/house/:id" element={<HouseDetails />} />
       </Routes>
       <Footer />
     </BrowserRouter>

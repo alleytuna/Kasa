@@ -1,11 +1,11 @@
-import "../styles/home.css"
-import "../styles/houseDetails.css"
+import "../styles/home.css";
+import "../styles/houseDetails.css";
 
-export default function Banner({ image, altText, description, className }) {
+export default function Banner({ image, altText, description }) {
   return (
-    <div className="Banner">
-      <img src={image} alt={altText} className={className}/>
+    <section className="Banner">
+      <img src={image} alt={altText} className="BannerHome" />
       <p className="BannerText">{description}</p>
-    </div>
+    </section>
   );
 }

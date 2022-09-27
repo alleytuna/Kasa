@@ -1,0 +1,78 @@
+.CarouselPicture {
+  position: relative;
+  top: -15px;
+  height: 415px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.ArrowLeft {
+  position: absolute;
+  top: 350px;
+  max-height: 80px;
+  width: 47px;
+  z-index: 99;
+}
+
+.ArrowRight {
+  position: absolute;
+  top: 350px;
+  right: 48px;
+  max-height: 80px;
+  width: 47px;
+  z-index: 99;
+}
+
+.IndexAndLength {
+  font-size: 18px;
+  position: absolute;
+  color: white;
+  z-index: 99;
+  left: 49%;
+  top: 530px;
+}
+
+@media screen and (max-width: 768px) {
+  .CarouselPicture {
+    top: 0px;
+    margin-bottom: 16px;
+  }
+
+  .ArrowLeft {
+    top: 250px;
+  }
+
+  .ArrowRight {
+    top: 250px;
+    right: 8px;
+  }
+
+  .IndexAndLength {
+    top: 440px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .CarouselPicture {
+    height: 255px;
+    top: 0px;
+  }
+
+  .ArrowLeft {
+    top: 170px;
+    width: 12px;
+    height: 20px;
+  }
+
+  .ArrowRight {
+    top: 170px;
+    right: 8px;
+    width: 12px;
+    height: 20px;
+  }
+
+  .IndexAndLength {
+    display: none;
+  }
+}

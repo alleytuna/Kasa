@@ -1,5 +1,4 @@
 import React from "react";
-import Banner from "../components/Banner";
 import Houses from "../data/houses.json";
 import { useParams } from "react-router-dom";
 import { Collapsible } from "../components/Collapsible";
@@ -8,26 +7,26 @@ import "../styles/houseDetails.css";
 import Rating from "../components/Rating";
 import Host from "../components/Host";
 import Tags from "../components/Tags";
+import Carousel from "../components/Carousel";
 
-export default function PageDetails() {
+export default function HouseDetails() {
   let urlId = useParams().id;
+  // filter on the .json file to find the house corresponding to the id sent in the url (and found thanks to useParams)
   let house = Houses.filter(function (house) {
     return house.id === urlId;
   });
 
+  // if house doesn't return at least one element, redirect to error page
   if (house[0] === undefined) {
     return <PageNotFound />;
   }
 
-  // carousel : par défaut, commencer pos0, suivant 
-  // - commenter le code
-  // photos bande déroulante ohlala
-
+  // extracting only the elements we'll use in our page
   const {
-    cover,
     title,
     location,
     description,
+    pictures,
     equipments,
     rating,
     host,
@@ -36,13 +35,8 @@ export default function PageDetails() {
 
   return (
     <main>
-      <Banner
-        image={cover}
-        altText="Paysage avec montagne"
-        description=""
-        className="BannerDetails"
-      />
-      <div className="AllInfo">
+      <Carousel pictures={pictures} />
+      <section className="AllInfo">
         <div className="HouseInfo">
           <h1 className="Title">{title}</h1>
           <h2 className="Location">{location}</h2>
@@ -52,7 +46,7 @@ export default function PageDetails() {
           <Host hostName={host.name} hostProfilePicture={host.picture} />
           <Rating rating={rating} />
         </div>
-      </div>
+      </section>
       <div className="AllShortCollapse">
         <Collapsible
           className="Short"

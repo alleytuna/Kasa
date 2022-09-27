@@ -13,17 +13,12 @@ export default function Home() {
         image={BannerHome}
         altText="Paysage de montagne"
         description="Chez vous, partout et ailleurs"
-        className="BannerHome"
       />
       <article className="ArticlesContainer">
-        {Houses.map((house) => {
+        {Houses.map((house, index) => {
           return (
-            <Link to={`/house/${house.id}`}>
-              <HomeArticle
-                key={house.id}
-                cover={house.cover}
-                title={house.title}
-              />
+            <Link to={`/house/${house.id}`} key={index}>
+              <HomeArticle cover={house.cover} title={house.title} />
             </Link>
           );
         })}

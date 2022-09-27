@@ -3,9 +3,13 @@ import "../styles/houseDetails.css";
 
 export default function Host({ hostName, hostProfilePicture }) {
   return (
-    <div className="HostNameAndPicture">
+    <section className="HostNameAndPicture">
       <h3 className="HostName">{hostName}</h3>
-      <img className="ProfilePicture" src={hostProfilePicture} alt={`${hostName}`} />
-    </div>
+      <img
+        className="ProfilePicture"
+        src={hostProfilePicture}
+        alt={`${hostName}'s face`}
+      />
+    </section>
   );
 }

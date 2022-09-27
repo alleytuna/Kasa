@@ -11,7 +11,6 @@ export default function About() {
         image={BannerAbout}
         altText="Paysage avec montagne"
         description=""
-        className="BannerHome"
       />
       <Collapsible
         className="Large"
