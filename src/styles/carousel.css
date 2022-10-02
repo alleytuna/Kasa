@@ -13,10 +13,12 @@
   max-height: 80px;
   width: 47px;
   z-index: 99;
+  cursor: pointer;
 }
 
 .ArrowRight {
   position: absolute;
+  cursor: pointer;
   top: 350px;
   right: 48px;
   max-height: 80px;
