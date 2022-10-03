@@ -1,8 +1,7 @@
 import React from "react";
 import Houses from "../data/houses.json";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { Collapsible } from "../components/Collapsible";
-import PageNotFound from "./404";
 import "../styles/houseDetails.css";
 import Rating from "../components/Rating";
 import Host from "../components/Host";
@@ -16,9 +15,9 @@ export default function HouseDetails() {
     return house.id === urlId;
   });
 
-  // if house doesn't return at least one element, redirect to error page
+  // if house doesn't return at least one element, navigate directly to page 404
   if (house[0] === undefined) {
-    return <PageNotFound />;
+    return <Navigate to="*" />;
   }
 
   // extracting only the elements we'll use in our page
